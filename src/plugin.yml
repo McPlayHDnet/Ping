@@ -1,0 +1,11 @@
+name: Ping
+version: 1.5.2
+author: McPlayHD
+website: https://McPlayHD.net/
+
+main: net.mcplayhd.ping.Ping
+
+commands:
+  ping:
+    description: Tool to show your and other players ping
+    usage: /ping <name>
