@@ -6,7 +6,7 @@ import net.mcplayhd.ping.utils.Updater;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
 import org.bukkit.Server;
-import org.bukkit.craftbukkit.v1_14_R1.entity.CraftPlayer;
+import org.bukkit.craftbukkit.v1_15_R1.entity.CraftPlayer;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.scheduler.BukkitRunnable;
@@ -88,6 +88,8 @@ public class Ping extends JavaPlugin {
             return ((org.bukkit.craftbukkit.v1_12_R1.entity.CraftPlayer)p).getHandle().playerConnection.player.ping;
         } else if (version.startsWith("v1_13")) {
             return ((org.bukkit.craftbukkit.v1_13_R2.entity.CraftPlayer)p).getHandle().playerConnection.player.ping;
+        } else if (version.startsWith("v1_14")) {
+            return ((org.bukkit.craftbukkit.v1_14_R1.entity.CraftPlayer) p).getHandle().playerConnection.player.ping;
         } else {
             return ((CraftPlayer)p).getHandle().playerConnection.player.ping;
         }
